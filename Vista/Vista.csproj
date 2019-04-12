@@ -112,6 +112,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AdministradorEventos.aspx" />
     <Content Include="AdministradorSistemas.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -169,6 +170,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministradorEventos.aspx.cs">
+      <DependentUpon>AdministradorEventos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministradorEventos.aspx.designer.cs">
+      <DependentUpon>AdministradorEventos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdministradorSistemas.aspx.cs">
       <DependentUpon>AdministradorSistemas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

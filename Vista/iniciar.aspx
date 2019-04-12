@@ -47,6 +47,14 @@
             width: 109px;
             height: 25px;
         }
+        .auto-style10 {
+            height: 23px;
+            text-align: center;
+        }
+        .auto-style11 {
+            width: 109px;
+            text-align: center;
+        }
     </style>
 	
 </head>
@@ -66,8 +74,7 @@
                                 <tr>
                                     <td>&nbsp;</td>
                                     <td class="auto-style2">
-                                        <asp:Label ID="Label1" runat="server" Text="Iniciar sesión"></asp:Label>
-                                    </td>
+                                        &nbsp;</td>
                                     <td class="auto-style5">&nbsp;</td>
                                     <td>&nbsp;</td>
                                     <td>&nbsp;</td>
@@ -75,8 +82,7 @@
                                 <tr>
                                     <td>&nbsp;</td>
                                     <td class="auto-style2">
-                                        <asp:Label ID="Label2" runat="server" Text="Documento"></asp:Label>
-                                    </td>
+                                        &nbsp;</td>
                                     <td class="auto-style5">&nbsp;</td>
                                     <td>&nbsp;</td>
                                     <td>&nbsp;</td>
@@ -84,45 +90,50 @@
                                 <tr>
                                     <td class="auto-style7"></td>
                                     <td class="auto-style8">
-                                        <asp:TextBox ID="txtdocumento" runat="server"></asp:TextBox>
-                                    </td>
-                                    <td class="auto-style9"></td>
-                                    <td class="auto-style7"></td>
-                                    <td class="auto-style7"></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td class="auto-style2">
+                                        &nbsp;</td>
+                                    <td class="auto-style9">
                                         <asp:Label ID="Label3" runat="server" Text="Usuario"></asp:Label>
                                     </td>
-                                    <td class="auto-style5">&nbsp;</td>
+                                    <td class="auto-style7"></td>
+                                    <td class="auto-style7"></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="auto-style2">
+                                        &nbsp;</td>
+                                    <td class="auto-style5">
+                                        <asp:TextBox ID="txtusuario" runat="server"></asp:TextBox>
+                                    </td>
                                     <td>&nbsp;</td>
                                     <td>&nbsp;</td>
                                 </tr>
                                 <tr>
                                     <td>&nbsp;</td>
                                     <td class="auto-style2">
-                                        <asp:TextBox ID="txtusuario" runat="server"></asp:TextBox>
+                                        &nbsp;</td>
+                                    <td class="auto-style5">
+                                        <asp:Label ID="Label4" runat="server" Text="Contraseña"></asp:Label>
                                     </td>
-                                    <td class="auto-style5">&nbsp;</td>
                                     <td>&nbsp;</td>
                                     <td>&nbsp;</td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style3"></td>
                                     <td class="auto-style4">
-                                        <asp:Label ID="Label4" runat="server" Text="Contraseña"></asp:Label>
+                                        &nbsp;</td>
+                                    <td class="auto-style6">
+                                        <asp:TextBox ID="txtcontraseña" Type="password" runat="server"></asp:TextBox>
                                     </td>
-                                    <td class="auto-style6"></td>
                                     <td class="auto-style3"></td>
                                     <td class="auto-style3"></td>
                                 </tr>
                                 <tr>
                                     <td>&nbsp;</td>
                                     <td class="auto-style2">
-                                        <asp:TextBox ID="txtcontraseña" Type="password" runat="server"></asp:TextBox>
+                                        &nbsp;</td>
+                                    <td class="auto-style11">
+                                        <asp:Button ID="btningresar" runat="server" OnClick="btningresar_Click" Text="Ingresar" />
                                     </td>
-                                    <td class="auto-style5">&nbsp;</td>
                                     <td>&nbsp;</td>
                                     <td>&nbsp;</td>
                                 </tr>
@@ -130,9 +141,8 @@
                                     <td class="auto-style3"></td>
                                     <td class="auto-style4"></td>
                                     <td class="auto-style6">
-                                        <asp:Button ID="btningresar" runat="server" OnClick="btningresar_Click" Text="Ingresar" />
-                                    </td>
-                                    <td class="auto-style3">
+                                        &nbsp;</td>
+                                    <td class="auto-style10">
                                         <asp:Label ID="txtmensaje" runat="server"></asp:Label>
                                     </td>
                                     <td class="auto-style3"></td>

@@ -20,22 +20,35 @@ namespace Vista
 
         protected void btningresar_Click(object sender, EventArgs e)
         {
-            int documento = int.Parse(txtdocumento.Text);
+          
             string usuario = txtusuario.Text;
             string contraseña = txtcontraseña.Text;
-            ejecuto = L.login(documento, usuario, contraseña);
+            ejecuto = L.login(usuario, contraseña);
             txtmensaje.Text = "";
             if (ejecuto)
             {
-              Response.Redirect("AdministradorSistemas.aspx");
-                
-            }
+                if (datos.Tables[0].Rows[0][0].ToString() == ("sistemas"))
+                {
+                    Response.Redirect("AdministradorSistemas.aspx");
+
+                }
+                else if (datos.Tables[0].Rows[0][0].ToString() == ("eventos"))
+                {
+                    Response.Redirect("AdministradorEventos.aspx");
+                }
+            } 
             else
             {
                 txtmensaje.Text = "Datos incorretos";
                
-
+                
             }
+       
+
+        }
+
+        protected void txtdocumento_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

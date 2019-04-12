@@ -8,9 +8,9 @@ namespace Control
     public class ControlLogin
     {
         Login l = new Login();
-        public bool login(int doc, string usu, string pws)
+        public bool login(string usu, string pws)
         {
-            return l.login(doc,usu,pws);
+            return l.login(usu,pws);
         }
 
 

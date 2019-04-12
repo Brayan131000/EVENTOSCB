@@ -11,9 +11,9 @@ namespace Conexion
         Persistencia p = new Persistencia();
         string sql="";
         DataSet data = new DataSet();
-        public bool login(int doc, string usu, string pws)
+        public bool login(string usu, string pws)
         {
-            sql = "select * from Encargado where idN_DocumentoE= " +doc+ " and Usuario='"+usu+ "' and Contraseña='"+pws+"';";
+            sql = "select * from Encargado where Usuario='"+usu+ "' and Contraseña='"+pws+"';";
             return p.ejecutarDML(sql);
 
         }
