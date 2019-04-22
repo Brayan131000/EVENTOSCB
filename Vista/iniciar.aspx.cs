@@ -23,16 +23,17 @@ namespace Vista
           
             string usuario = txtusuario.Text;
             string contraseña = txtcontraseña.Text;
-            ejecuto = L.login(usuario, contraseña);
+            datos = L.login(usuario, contraseña);
             txtmensaje.Text = "";
+            if (datos.Tables[0].Rows.Count > 0) ejecuto = true;
             if (ejecuto)
             {
-                if (datos.Tables[0].Rows[0][0].ToString() == ("sistemas"))
+                if (datos.Tables[0].Rows[0][3].ToString() == ("sistemas"))
                 {
                     Response.Redirect("AdministradorSistemas.aspx");
 
                 }
-                else if (datos.Tables[0].Rows[0][0].ToString() == ("eventos"))
+                else if (datos.Tables[0].Rows[0][3].ToString() == ("eventos"))
                 {
                     Response.Redirect("AdministradorEventos.aspx");
                 }

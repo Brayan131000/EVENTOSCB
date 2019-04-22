@@ -11,10 +11,10 @@ namespace Conexion
         Persistencia p = new Persistencia();
         string sql="";
         DataSet data = new DataSet();
-        public bool login(string usu, string pws)
+        public DataSet login(string usu, string pws)
         {
             sql = "select * from Encargado where Usuario='"+usu+ "' and Contraseña='"+pws+"';";
-            return p.ejecutarDML(sql);
+            return p.ejecutarConsulta(sql);
 
         }
 
