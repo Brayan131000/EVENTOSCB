@@ -11,7 +11,10 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 199px;
+            width: 93px;
+        }
+        .auto-style3 {
+            margin-left: 291px;
         }
     </style>
 </head>
@@ -30,22 +33,22 @@
                 <td class="auto-style2">&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td class="auto-style2">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td class="auto-style2">&nbsp;</td>
                 <td>
-                    <asp:Label ID="Label1" runat="server" Text="ADMINISTRADOR DE SISTEMAS"></asp:Label>
+                    <asp:Button ID="Button1" runat="server" CssClass="auto-style3" OnClick="Button1_Click" Text="Cerrar sesión" />
                 </td>
+            </tr>
+            <tr>
                 <td>&nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style2">
+                    <asp:Button ID="btncrear" runat="server" OnClick="btncrear_Click" Text="Crear administrador" />
+                </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>

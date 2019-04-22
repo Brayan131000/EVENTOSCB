@@ -112,8 +112,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="AdministradorEventos.aspx" />
-    <Content Include="AdministradorSistemas.aspx" />
+    <Content Include="Administrador de eventos\AdministradorEventos.aspx" />
+    <Content Include="Administrador de sistemas\AdministradorSistemas.aspx" />
+    <Content Include="Administrador de sistemas\CrearAdmin.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -170,19 +171,26 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdministradorEventos.aspx.cs">
+    <Compile Include="Administrador de eventos\AdministradorEventos.aspx.cs">
       <DependentUpon>AdministradorEventos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdministradorEventos.aspx.designer.cs">
+    <Compile Include="Administrador de eventos\AdministradorEventos.aspx.designer.cs">
       <DependentUpon>AdministradorEventos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdministradorSistemas.aspx.cs">
+    <Compile Include="Administrador de sistemas\AdministradorSistemas.aspx.cs">
       <DependentUpon>AdministradorSistemas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdministradorSistemas.aspx.designer.cs">
+    <Compile Include="Administrador de sistemas\AdministradorSistemas.aspx.designer.cs">
       <DependentUpon>AdministradorSistemas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador de sistemas\CrearAdmin.aspx.cs">
+      <DependentUpon>CrearAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador de sistemas\CrearAdmin.aspx.designer.cs">
+      <DependentUpon>CrearAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">

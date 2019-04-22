@@ -30,12 +30,12 @@ namespace Vista
             {
                 if (datos.Tables[0].Rows[0][3].ToString() == ("sistemas"))
                 {
-                    Response.Redirect("AdministradorSistemas.aspx");
+                    Response.Redirect("Administrador de sistemas/AdministradorSistemas.aspx");
 
                 }
                 else if (datos.Tables[0].Rows[0][3].ToString() == ("eventos"))
                 {
-                    Response.Redirect("AdministradorEventos.aspx");
+                    Response.Redirect("Administrador de eventos/AdministradorEventos.aspx");
                 }
             } 
             else
