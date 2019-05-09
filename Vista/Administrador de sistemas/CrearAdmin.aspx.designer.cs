@@ -22,6 +22,24 @@ namespace Vista.Administrador_de_sistemas {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// Control txtmensajeformu.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtmensajeformu;
+        
+        /// <summary>
+        /// Control Button1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
         /// Control Label1.
         /// </summary>
         /// <remarks>
@@ -40,13 +58,13 @@ namespace Vista.Administrador_de_sistemas {
         protected global::System.Web.UI.WebControls.TextBox txbdocumento;
         
         /// <summary>
-        /// Control Button1.
+        /// Control rvdocumento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rvdocumento;
         
         /// <summary>
         /// Control Label4.
@@ -67,6 +85,15 @@ namespace Vista.Administrador_de_sistemas {
         protected global::System.Web.UI.WebControls.TextBox txbnombre;
         
         /// <summary>
+        /// Control cvnombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvnombre;
+        
+        /// <summary>
         /// Control txbapellido.
         /// </summary>
         /// <remarks>
@@ -74,6 +101,15 @@ namespace Vista.Administrador_de_sistemas {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txbapellido;
+        
+        /// <summary>
+        /// Control CustomValidator1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
         
         /// <summary>
         /// Control Label5.
@@ -94,6 +130,15 @@ namespace Vista.Administrador_de_sistemas {
         protected global::System.Web.UI.WebControls.TextBox txbcorreo;
         
         /// <summary>
+        /// Control rfvcorreo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvcorreo;
+        
+        /// <summary>
         /// Control Label6.
         /// </summary>
         /// <remarks>
@@ -110,6 +155,15 @@ namespace Vista.Administrador_de_sistemas {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txbtelefono;
+        
+        /// <summary>
+        /// Control cvtelefono.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvtelefono;
         
         /// <summary>
         /// Control Label7.
@@ -130,6 +184,15 @@ namespace Vista.Administrador_de_sistemas {
         protected global::System.Web.UI.WebControls.TextBox txbcelular;
         
         /// <summary>
+        /// Control cvcelular.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvcelular;
+        
+        /// <summary>
         /// Control Label2.
         /// </summary>
         /// <remarks>
@@ -146,6 +209,24 @@ namespace Vista.Administrador_de_sistemas {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txbusuario;
+        
+        /// <summary>
+        /// Control cvusuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvusuario;
+        
+        /// <summary>
+        /// Control txtmensajecontra.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtmensajecontra;
         
         /// <summary>
         /// Control Label3.
@@ -166,6 +247,15 @@ namespace Vista.Administrador_de_sistemas {
         protected global::System.Web.UI.WebControls.TextBox txbcontraseña;
         
         /// <summary>
+        /// Control cvcontraseña.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvcontraseña;
+        
+        /// <summary>
         /// Control Label8.
         /// </summary>
         /// <remarks>
@@ -175,13 +265,22 @@ namespace Vista.Administrador_de_sistemas {
         protected global::System.Web.UI.WebControls.Label Label8;
         
         /// <summary>
-        /// Control txbtipousuario.
+        /// Control dbltipousuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbtipousuario;
+        protected global::System.Web.UI.WebControls.DropDownList dbltipousuario;
+        
+        /// <summary>
+        /// Control rftipousuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rftipousuario;
         
         /// <summary>
         /// Control btncrear.

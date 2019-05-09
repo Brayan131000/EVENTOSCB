@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Vista {
+namespace Vista.Administrador_de_sistemas {
     
     
-    public partial class AdministradorSistemas {
+    public partial class InicioAdmin {
         
         /// <summary>
         /// Control form1.
@@ -31,24 +31,6 @@ namespace Vista {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// Control txbbuscar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbbuscar;
-        
-        /// <summary>
-        /// Control Button6.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button6;
-        
-        /// <summary>
         /// Control Button2.
         /// </summary>
         /// <remarks>
@@ -58,30 +40,12 @@ namespace Vista {
         protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
-        /// Control gvCuentas.
+        /// Control Button3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvCuentas;
-        
-        /// <summary>
-        /// Control btncrear.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btncrear;
-        
-        /// <summary>
-        /// Control txtmensaje.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtmensaje;
+        protected global::System.Web.UI.WebControls.Button Button3;
     }
 }
