@@ -16,7 +16,7 @@ namespace Control
         public DataSet mostrarCuentas()
         {
             DataSet datos = new DataSet();
-            string sql = "Select p.idN_DocumentoP,p.nombre,p.apellido,p.correo,p.telefono,p.celular,e.idN_DocumentoEn,e.tipo_usuario,e.usuario,e.contraseña from persona p inner join encargado e on (p.idN_DocumentoP = e.idN_DocumentoEn)";
+            string sql = "Select p.idN_DocumentoP,p.nombre,p.apellido,p.correo,p.telefono,p.celular,e.idN_DocumentoEn,e.tipo_usuario,e.usuario,e.contraseña as cs from persona p inner join encargado e on (p.idN_DocumentoP = e.idN_DocumentoEn)";
             datos = p.ejecutarConsulta(sql);
             return datos;
         }

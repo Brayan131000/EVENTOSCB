@@ -130,10 +130,10 @@
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Contraseña">
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txbcontraseña" runat="server" Text='<%# Bind("Contraseña") %>' Width="70px"></asp:TextBox>
+                                    <asp:TextBox ID="txbcontraseña" runat="server" Text='<%# Bind("cs") %>' Width="70px"></asp:TextBox>
                                 </EditItemTemplate>
                                 <ItemTemplate>
-                                    <asp:Label ID="Label8" runat="server" Text='<%# Bind("Contraseña") %>'></asp:Label>
+                                    <asp:Label ID="Label8" runat="server" Text='<%# Bind("cs") %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         

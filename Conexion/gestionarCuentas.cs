@@ -100,7 +100,8 @@ namespace Conexion
 
 
         }
-        public DataSet buscarCuentas(int documento)
+        public DataSet buscarCuentas
+            (int documento)
         {
             DataSet datos = new DataSet();
             MySqlDataAdapter miadaptador = new MySqlDataAdapter();
