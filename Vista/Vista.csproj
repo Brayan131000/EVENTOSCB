@@ -137,6 +137,10 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Imagenes\Cancelar.png" />
+    <Content Include="Imagenes\Confirmar.png" />
+    <Content Include="Imagenes\editar2.png" />
+    <Content Include="Imagenes\Eliminar %282%29.png" />
     <Content Include="login.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

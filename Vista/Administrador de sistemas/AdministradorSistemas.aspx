@@ -146,7 +146,7 @@
                                 </ItemTemplate>
                             </asp:TemplateField>
                         
-                            <asp:CommandField ShowEditButton="true" ShowDeleteButton="True" ShowCancelButton="true" AccessibleHeaderText="Opciones" HeaderText="Opciones"  /> 
+                            <asp:CommandField ShowEditButton="true" ShowDeleteButton="True" ShowCancelButton="true" AccessibleHeaderText="Opciones" HeaderText="Opciones" ButtonType="Image" CancelImageUrl="~/Imagenes/Cancelar.png" DeleteImageUrl="~/Imagenes/Eliminar (2).png" EditImageUrl="~/Imagenes/editar2.png" UpdateImageUrl="~/Imagenes/Confirmar.png"  /> 
                         
                         </Columns>
                         <FooterStyle BackColor="#CCCCCC" />

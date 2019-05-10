@@ -146,5 +146,52 @@ namespace Conexion
 
             return ejecuto;
         }
+        public bool modificarEmpresa(int nit,string tipoempresa, int documento,string nombre, string direccion,  string correo,string celular)
+        {
+            bool ejecuto = false;
+        
+            MySqlCommand comando = new MySqlCommand();
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Connection = p.abrirConexion();
+            comando.CommandText = "modificarEmpresa";
+            comando.Parameters.AddWithValue("@nit", nit);
+            comando.Parameters.AddWithValue("@tipoempresa",tipoempresa);
+            comando.Parameters.AddWithValue("@documento", documento);
+            comando.Parameters.AddWithValue("@nombre", nombre);
+            comando.Parameters.AddWithValue("@direccion", direccion);
+            comando.Parameters.AddWithValue("@correo", correo);
+            comando.Parameters.AddWithValue("@celular", celular);
+            comando.Parameters.AddWithValue("@ireturnvalue", MySqlDbType.Int32);
+            comando.Parameters["@ireturnvalue"].Direction = ParameterDirection.ReturnValue;
+            //MySqlCommand comando = new MySqlCommand(sql, cadena);
+            comando.ExecuteScalar();
+            int resultado = Convert.ToInt32(comando.Parameters["@ireturnvalue"].Value);
+
+            if (resultado > 0)
+            {
+                ejecuto = true;
+
+            }
+
+            return ejecuto;
+        }
+        public DataSet buscarEmpresa(int documento)
+        {
+            DataSet datos = new DataSet();
+            MySqlDataAdapter miadaptador = new MySqlDataAdapter();
+            //MySqlCommand objSelectCmd = new MySqlCommand();
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = p.abrirConexion();
+            comando.CommandText = "buscarEmpresa";
+            comando.CommandType = CommandType.StoredProcedure;
+
+            comando.Parameters.AddWithValue("@Nit", documento).Direction = ParameterDirection.Input;
+
+            miadaptador.SelectCommand = comando;
+            miadaptador.Fill(datos);
+            p.cerrarConexion();
+            return datos;
+
+        }
     }
 }

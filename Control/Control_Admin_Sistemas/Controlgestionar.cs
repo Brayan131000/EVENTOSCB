@@ -55,6 +55,15 @@ namespace Control
             datos = p.ejecutarConsulta(sql);
             return datos;
         }
+        public DataSet buscarEmpresa(int nit)
+        {
+            return c.buscarEmpresa(nit);
+        }
+        public bool modificarEmpresa (int nit, string tipoempresa, int documento, string nombre, string direccion, string correo, string  celular)
+        {
+            return c.modificarEmpresa(nit, tipoempresa, documento, nombre, direccion, correo, celular);
+
+        }
     }
 } 
 
