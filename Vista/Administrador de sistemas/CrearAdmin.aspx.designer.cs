@@ -103,6 +103,33 @@ namespace Vista.Administrador_de_sistemas {
         protected global::System.Web.UI.WebControls.CustomValidator cvnombre;
         
         /// <summary>
+        /// Control Label8.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label8;
+        
+        /// <summary>
+        /// Control dbltipousuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dbltipousuario;
+        
+        /// <summary>
+        /// Control rftipousuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rftipousuario;
+        
+        /// <summary>
         /// Control Apellido.
         /// </summary>
         /// <remarks>
@@ -274,31 +301,22 @@ namespace Vista.Administrador_de_sistemas {
         protected global::System.Web.UI.WebControls.CustomValidator cvcontraseña;
         
         /// <summary>
-        /// Control Label8.
+        /// Control Label10.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
+        protected global::System.Web.UI.WebControls.Label Label10;
         
         /// <summary>
-        /// Control dbltipousuario.
+        /// Control dblestado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dbltipousuario;
-        
-        /// <summary>
-        /// Control rftipousuario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rftipousuario;
+        protected global::System.Web.UI.WebControls.DropDownList dblestado;
         
         /// <summary>
         /// Control btncrear.

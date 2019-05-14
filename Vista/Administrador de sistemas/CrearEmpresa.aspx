@@ -181,6 +181,20 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
+                    <td class="auto-style5">&nbsp;</td>
+                    <td class="auto-style4">&nbsp;</td>
+                    <td class="auto-style6">
+                        <asp:Label ID="Label9" runat="server" Text="Estado"></asp:Label>
+                    </td>
+                    <td class="auto-style3">
+                        <asp:DropDownList ID="ddlestado" runat="server">
+                            <asp:ListItem Value="Habilitado"></asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
                     <td colspan="6">
                        <center> <asp:Button ID="Button1" runat="server" Text="REGISTRAR" OnClick="Button1_Click" />
                   </center>  </td>

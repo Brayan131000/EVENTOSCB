@@ -28,7 +28,8 @@ namespace Vista.Administrador_de_sistemas
             string direccion = txbdireccion.Text;
             string celular = txbtelefono.Text;
             string correo = txbcorreo.Text;
-            ejecuto = c.crearEmpresa(nit, persona, documentoE, nombre, direccion, celular,correo);
+            string estado= ddlestado.SelectedValue;
+            ejecuto = c.crearEmpresa(nit, persona, documentoE, nombre, direccion, celular,correo,estado);
             if (ejecuto == true )
             {
                 txtmensaje.Text = "Se registró correctamente";

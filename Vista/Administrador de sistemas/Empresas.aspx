@@ -61,7 +61,7 @@
                     <asp:Button ID="btnbuscar" runat="server" Height="21px" Text="Buscar" Width="54px" OnClick="btnbuscar_Click" />
                 </td>
                 <td class="auto-style9">
-                    <asp:TextBox ID="txbbuscar" runat="server" CssClass="auto-style4" Width="133px"></asp:TextBox>
+                    <asp:TextBox ID="txbbuscar" runat="server" CssClass="auto-style4" Width="133px" OnTextChanged="txbbuscar_TextChanged"></asp:TextBox>
                     </td>
             </tr>
             <tr>
@@ -134,6 +134,14 @@
                                </EditItemTemplate>
                                <ItemTemplate>
                                    <asp:Label ID="Label6" runat="server" Text='<%# Bind("Telefono_Cel") %>'></asp:Label>
+                               </ItemTemplate>
+                           </asp:TemplateField>
+                           <asp:TemplateField HeaderText="Estado">
+                               <EditItemTemplate>
+                                   <asp:TextBox ID="txbestado" runat="server" Text='<%# Bind("estado") %>'></asp:TextBox>
+                               </EditItemTemplate>
+                               <ItemTemplate>
+                                   <asp:Label ID="Label8" runat="server" Text='<%# Bind("estado") %>'></asp:Label>
                                </ItemTemplate>
                            </asp:TemplateField>
                            <asp:CommandField HeaderText="Opciones" ShowDeleteButton="True" ShowEditButton="True" ButtonType="Image" CancelImageUrl="~/Imagenes/Cancelar.png" DeleteImageUrl="~/Imagenes/Eliminar (2).png" EditImageUrl="~/Imagenes/editar2.png" UpdateImageUrl="~/Imagenes/Confirmar.png" />

@@ -46,7 +46,8 @@ namespace Vista.Administrador_de_sistemas
             string direccion = ((TextBox)row.FindControl("txbdireccion")).Text;
             string correo= ((TextBox)row.FindControl("txbcorreo")).Text;
             string celular= ((TextBox)row.FindControl("txbcelular")).Text;
-            ejecuto = g.modificarEmpresa(nit, tipoempresa, documento, nombre, direccion, correo, celular);
+            string estado = ((TextBox)row.FindControl("txbestado")).Text;
+            ejecuto = g.modificarEmpresa(nit, tipoempresa, documento, nombre, direccion, correo, celular,estado);
             if(ejecuto==true)
             {
                 txtmensaje.Text = "Editado correctamente";
@@ -95,6 +96,11 @@ namespace Vista.Administrador_de_sistemas
         {
             gvEmpresa.PageIndex = e.NewPageIndex;
             mostrarEmpresa();
+        }
+
+        protected void txbbuscar_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

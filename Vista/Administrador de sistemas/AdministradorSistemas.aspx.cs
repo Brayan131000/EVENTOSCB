@@ -107,7 +107,8 @@ namespace Vista
             usuario = ((TextBox)row.FindControl("txbusuario")).Text;
             contraseña = ((TextBox)row.FindControl("txbcontraseña")).Text;
             tipousuario = ((TextBox)row.FindControl("txbtipousuario")).Text;
-            ejecuto = g.modificarAdmin(documento, nombre, apellido, correo, telefono, celular, usuario, contraseña, tipousuario);
+            string estado = ((TextBox)row.FindControl("txbestado")).Text;
+            ejecuto = g.modificarAdmin(documento, nombre, apellido, correo, telefono, celular, usuario, contraseña, tipousuario,estado);
             if (ejecuto == true)
             {
                
@@ -135,7 +136,7 @@ namespace Vista
 
         protected void gvCuentas_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            bool ejecuto = false;
+           /* bool ejecuto = false;
             GridViewRow row = (GridViewRow)gvCuentas.Rows[e.RowIndex];
 
             // documento= int.Parse(gvCuentas.DaRows[e.RowIndex].Cells[0])());
@@ -145,7 +146,7 @@ namespace Vista
             string valor = ((Label)gvCuentas.Rows[e.RowIndex].FindControl("Label1")).Text;
             documento = int.Parse(valor);
             ejecuto = g.eliminarCategoria(documento);
-            mostrarCuentas();
+            mostrarCuentas();*/
         }
 
         protected void Button6_Click(object sender, EventArgs e)

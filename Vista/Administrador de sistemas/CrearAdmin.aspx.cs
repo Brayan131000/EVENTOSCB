@@ -34,7 +34,8 @@ namespace Vista.Administrador_de_sistemas
                 string usuario = txbusuario.Text;
                 string contraseña = txbcontraseña.Text;
                 string tipousuario = dbltipousuario.SelectedValue;
-                ejecuto = C.crearAdmin(documento, nombre, apellido, correo, telefono, celular, usuario, contraseña, tipousuario);
+                string estado= dblestado.SelectedValue;
+                ejecuto = C.crearAdmin(documento, nombre, apellido, correo, telefono, celular, usuario, contraseña, tipousuario,estado);
                 if (ejecuto)
                 {
                     txtmensaje.Text = "Se creo el administrador correctamente";

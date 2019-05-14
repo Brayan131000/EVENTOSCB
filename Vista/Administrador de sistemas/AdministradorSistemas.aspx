@@ -130,23 +130,33 @@
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Contraseña">
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txbcontraseña" runat="server" Text='<%# Bind("cs") %>' Width="70px"></asp:TextBox>
+                                    <asp:TextBox ID="txbcontraseña" runat="server" Text='<%# Bind("Contraseña") %>' Width="70px"></asp:TextBox>
                                 </EditItemTemplate>
                                 <ItemTemplate>
-                                    <asp:Label ID="Label8" runat="server" Text='<%# Bind("cs") %>'></asp:Label>
+                                    <asp:Label ID="Label8" runat="server" Text='<%# Bind("Contraseña") %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         
                             <asp:TemplateField HeaderText="Tipo de usuario">
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txbtipousuario" runat="server" Text='<%# Bind("Tipo_Usuario") %>' Height="16px" Width="70px"></asp:TextBox>
+                                   
+                             <asp:TextBox ID="txbtipousuario" runat="server" Text='<%# Bind("Tipo_Usuario") %>' Width="70px"></asp:TextBox>
                                 </EditItemTemplate>
                                 <ItemTemplate>
                                     <asp:Label ID="Label9" runat="server" Text='<%# Bind("Tipo_Usuario") %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         
-                            <asp:CommandField ShowEditButton="true" ShowDeleteButton="True" ShowCancelButton="true" AccessibleHeaderText="Opciones" HeaderText="Opciones" ButtonType="Image" CancelImageUrl="~/Imagenes/Cancelar.png" DeleteImageUrl="~/Imagenes/Eliminar (2).png" EditImageUrl="~/Imagenes/editar2.png" UpdateImageUrl="~/Imagenes/Confirmar.png"  /> 
+                            <asp:TemplateField HeaderText="Estado">
+                                <EditItemTemplate>
+                                    <asp:TextBox ID="txbestado" runat="server" Text='<%# Bind("Estado") %>'></asp:TextBox>
+                                </EditItemTemplate>
+                                <ItemTemplate>
+                                    <asp:Label ID="Label2" runat="server" Text='<%# Bind("Estado") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        
+                            <asp:CommandField ShowEditButton="true" ShowCancelButton="true" AccessibleHeaderText="Opciones" ButtonType="Image" CancelImageUrl="~/Imagenes/Cancelar.png" DeleteImageUrl="~/Imagenes/Eliminar (2).png" EditImageUrl="~/Imagenes/editar2.png" UpdateImageUrl="~/Imagenes/Confirmar.png"  /> 
                         
                         </Columns>
                         <FooterStyle BackColor="#CCCCCC" />

@@ -27,20 +27,31 @@ namespace Vista
             if (datos.Tables[0].Rows.Count > 0) ejecuto = true;
             if (ejecuto)
             {
-                if (datos.Tables[0].Rows[0][1].ToString() == ("Sistemas"))
+                if (datos.Tables[0].Rows[0][1].ToString() == ("Sistemas") && datos.Tables[0].Rows[0][4].ToString() == ("Habilitado"))
                 {
                     Response.Redirect("Administrador de sistemas/InicioAdmin.aspx");
-
                 }
-                else if (datos.Tables[0].Rows[0][1].ToString() == ("Eventos"))
+                else if (datos.Tables[0].Rows[0][1].ToString() == ("Eventos") && datos.Tables[0].Rows[0][4].ToString() == ("Habilitado"))
                 {
                     Response.Redirect("Administrador de eventos/AdministradorEventos.aspx");
+
                 }
+                else if (datos.Tables[0].Rows[0][1].ToString() == ("Sistemas") && datos.Tables[0].Rows[0][4].ToString() == ("Deshabilitado"))
+                {
+                    txtmensaje.Text = "Su cuenta se encuentra deshabilitada. Por favor comuniquese con el administrador de sistemas para recuperarla.";
+                }
+                else if (datos.Tables[0].Rows[0][1].ToString() == ("Eventos") && datos.Tables[0].Rows[0][4].ToString() == ("Deshabilitado"))
+                {
+                    txtmensaje.Text = "Su cuenta se encuentra deshabilitada. Por favor comuniquese con el administrador de sistemas para recuperarla";
+
+                }
+
             }
+          
             else
             {
 
-                txtmensaje.Text = "Datos incorrectos";
+                txtmensaje.Text = "Usuario o contraseña incorrectos";
 
 
             }

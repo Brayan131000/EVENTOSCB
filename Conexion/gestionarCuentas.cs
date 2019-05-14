@@ -10,7 +10,7 @@ namespace Conexion
     public class gestionarCuentas
     {
         Persistencia p = new Persistencia();
-        public bool ejecutarDMLProcedimiento(int documento, string nombre, string apellido, string correo, decimal telefono, decimal celular, string usuario, string contraseña, string tipo_usuario)
+        public bool ejecutarDMLProcedimiento(int documento, string nombre, string apellido, string correo, decimal telefono, decimal celular, string usuario, string contraseña, string tipo_usuario,string estado)
         {
 
             bool ejecuto = false;
@@ -18,15 +18,16 @@ namespace Conexion
             comando.CommandType = CommandType.StoredProcedure;
             comando.Connection = p.abrirConexion();
             comando.CommandText = "guardarEncargado";
-            comando.Parameters.AddWithValue("@numeroDocumento", documento);
+            comando.Parameters.AddWithValue("@idPersona", documento);
+            comando.Parameters.AddWithValue("@tipousuario", tipo_usuario);
             comando.Parameters.AddWithValue("@nombre", nombre);
             comando.Parameters.AddWithValue("@apellido", apellido);
             comando.Parameters.AddWithValue("@correo", correo);
             comando.Parameters.AddWithValue("@telefono", telefono);
             comando.Parameters.AddWithValue("@celular", celular);
             comando.Parameters.AddWithValue("@usuario", usuario);
-            comando.Parameters.AddWithValue("@contraseña", contraseña);
-            comando.Parameters.AddWithValue("@tipo_usuario", tipo_usuario);
+            comando.Parameters.AddWithValue("@contrasena", contraseña);
+            comando.Parameters.AddWithValue("@estado", estado);
             comando.Parameters.AddWithValue("@ireturnvalue", MySqlDbType.Int32);
             comando.Parameters["@ireturnvalue"].Direction = ParameterDirection.ReturnValue;
             //MySqlCommand comando = new MySqlCommand(sql, cadena);
@@ -42,7 +43,7 @@ namespace Conexion
             return ejecuto;
         }
 
-        public bool modificarCuentas(int documento, string nombre, string apellido, string correo, decimal telefono, decimal celular, string usuario, string contraseña, string tipo_usuario)
+        public bool modificarCuentas(int documento, string nombre, string apellido, string correo, decimal telefono, decimal celular, string usuario, string contraseña, string tipo_usuario,string estado)
         {
             bool ejecuto = false;
             int filas = 0;
@@ -50,15 +51,16 @@ namespace Conexion
             comando.CommandType = CommandType.StoredProcedure;
             comando.Connection = p.abrirConexion();
             comando.CommandText = "modificarCuentas";
-            comando.Parameters.AddWithValue("@numeroDocumento", documento);
+            comando.Parameters.AddWithValue("@idpersona", documento);
+            comando.Parameters.AddWithValue("@tipousuario", tipo_usuario);
             comando.Parameters.AddWithValue("@nombre", nombre);
             comando.Parameters.AddWithValue("@apellido", apellido);
             comando.Parameters.AddWithValue("@correo", correo);
             comando.Parameters.AddWithValue("@telefono", telefono);
             comando.Parameters.AddWithValue("@celular", celular);
             comando.Parameters.AddWithValue("@usuario", usuario);
-            comando.Parameters.AddWithValue("@contraseña", contraseña);
-            comando.Parameters.AddWithValue("@tipo_usuario", tipo_usuario);
+            comando.Parameters.AddWithValue("@contrasena", contraseña);
+            comando.Parameters.AddWithValue("@Estado", estado);
             comando.Parameters.AddWithValue("@ireturnvalue", MySqlDbType.Int32);
             comando.Parameters["@ireturnvalue"].Direction = ParameterDirection.ReturnValue;
             //MySqlCommand comando = new MySqlCommand(sql, cadena);
@@ -119,14 +121,14 @@ namespace Conexion
             return datos;
 
         }
-        public bool crearEmpresa (int nitempresa, string persona, int documentoE, string nombre, string direccion , string telefono,string correo)
+        public bool crearEmpresa (int nitempresa, string persona, int documentoE, string nombre, string direccion , string telefono,string correo,string estado)
         {
 
             bool ejecuto = false;
             MySqlCommand comando = new MySqlCommand();
             comando.CommandType = CommandType.StoredProcedure;
             comando.Connection = p.abrirConexion();
-            comando.CommandText = "crearEmpresa";
+            comando.CommandText = "guardarEmpresa";
             comando.Parameters.AddWithValue("@NitEm", nitempresa);
             comando.Parameters.AddWithValue("@per_clien", persona);
             comando.Parameters.AddWithValue("@idpersona", documentoE);
@@ -134,6 +136,7 @@ namespace Conexion
             comando.Parameters.AddWithValue("@direccion", direccion);
             comando.Parameters.AddWithValue("@correo", correo);
             comando.Parameters.AddWithValue("@telefono_cel", telefono);
+            comando.Parameters.AddWithValue("@estado", estado);
             comando.Parameters.AddWithValue("@ireturnvalue", MySqlDbType.Int32);
             comando.Parameters["@ireturnvalue"].Direction = ParameterDirection.ReturnValue;        
             comando.ExecuteScalar();
@@ -147,7 +150,7 @@ namespace Conexion
 
             return ejecuto;
         }
-        public bool modificarEmpresa(int nit,string tipoempresa, int documento,string nombre, string direccion,  string correo,string celular)
+        public bool modificarEmpresa(int nit,string tipoempresa, int documento,string nombre, string direccion,  string correo,string celular,string estado)
         {
             bool ejecuto = false;
         
@@ -156,12 +159,13 @@ namespace Conexion
             comando.Connection = p.abrirConexion();
             comando.CommandText = "modificarEmpresa";
             comando.Parameters.AddWithValue("@nit", nit);
-            comando.Parameters.AddWithValue("@tipoempresa",tipoempresa);
-            comando.Parameters.AddWithValue("@documento", documento);
+            comando.Parameters.AddWithValue("@per_clien",tipoempresa);
+            comando.Parameters.AddWithValue("@idPersona", documento);
             comando.Parameters.AddWithValue("@nombre", nombre);
             comando.Parameters.AddWithValue("@direccion", direccion);
             comando.Parameters.AddWithValue("@correo", correo);
-            comando.Parameters.AddWithValue("@celular", celular);
+            comando.Parameters.AddWithValue("@telefono_cel", celular);
+            comando.Parameters.AddWithValue("@estado", estado);
             comando.Parameters.AddWithValue("@ireturnvalue", MySqlDbType.Int32);
             comando.Parameters["@ireturnvalue"].Direction = ParameterDirection.ReturnValue;
             //MySqlCommand comando = new MySqlCommand(sql, cadena);

@@ -164,12 +164,28 @@
                 <tr>
                     <td class="auto-style8">&nbsp;</td>
                     <td class="auto-style12">
-                        <asp:Label ID="Apellido" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="Label8" runat="server" Text="Tipo de usuario"></asp:Label>
                     </td>
                     <td class="auto-style19">
-                        <asp:TextBox ID="txbapellido" runat="server"></asp:TextBox>
+                        <asp:DropDownList ID="dbltipousuario" runat="server">
+                            <asp:ListItem>Sistemas</asp:ListItem>
+                            <asp:ListItem>Eventos</asp:ListItem>
+                        </asp:DropDownList>
                     </td>
                     <td class="auto-style9">
+                        <asp:RequiredFieldValidator ID="rftipousuario" runat="server" ControlToValidate="dbltipousuario" ErrorMessage="Este campo es obligatorio"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style5">
+                        &nbsp;</td>
+                    <td class="auto-style14">
+                        <asp:Label ID="Apellido" runat="server" Text="Apellido"></asp:Label>
+                    </td>
+                    <td class="auto-style22">
+                        <asp:TextBox ID="txbapellido" runat="server"></asp:TextBox>
+                    </td>
+                    <td class="auto-style4">
                         <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="txbapellido" OnServerValidate="CustomValidator1_ServerValidate1">El apellido debe contener al menos 3 letras</asp:CustomValidator>
                     </td>
                 </tr>
@@ -187,28 +203,28 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style5">
+                    <td class="auto-style6">
                         &nbsp;</td>
-                    <td class="auto-style14">
+                    <td class="auto-style13">
                         <asp:Label ID="Label6" runat="server" Text="Teléfono"></asp:Label>
                     </td>
-                    <td class="auto-style22">
+                    <td class="auto-style20">
                         <asp:TextBox ID="txbtelefono" runat="server"></asp:TextBox>
                     </td>
-                    <td class="auto-style4">
+                    <td class="auto-style7">
                         <asp:CustomValidator ID="cvtelefono" runat="server" ClientValidationFunction="txbtelefono" ErrorMessage="Debe contener  ocho digitos" OnServerValidate="cvtelefono_ServerValidate"></asp:CustomValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style6">
+                    <td class="auto-style5">
                         &nbsp;</td>
-                    <td class="auto-style13">
+                    <td class="auto-style14">
                         <asp:Label ID="Label7" runat="server" Text="Celular"></asp:Label>
                     </td>
-                    <td class="auto-style20">
+                    <td class="auto-style22">
                         <asp:TextBox ID="txbcelular" runat="server"></asp:TextBox>
                     </td>
-                    <td class="auto-style7">
+                    <td class="auto-style4">
                         <asp:CustomValidator ID="cvcelular" runat="server" ControlToValidate="txbcelular" ErrorMessage="Debe contener diez digítos" OnServerValidate="cvcelular_ServerValidate"></asp:CustomValidator>
                     </td>
                 </tr>
@@ -231,33 +247,41 @@
                    </center> </td>
                 </tr>
                 <tr>
-                    <td class="auto-style8">
-                        &nbsp;</td>
-                    <td class="auto-style12">
-                        <asp:Label ID="Label3" runat="server" Text="Contraseña"></asp:Label>
-                    </td>
-                    <td class="auto-style19">
-                        <asp:TextBox ID="txbcontraseña" runat="server"></asp:TextBox>
-                    </td>
-                    <td class="auto-style9">
-                        <asp:CustomValidator ID="cvcontraseña" runat="server" ControlToValidate="txbcontraseña" ErrorMessage="Contraseña  muy corta. Debe contener al menos 8 caracteres " OnServerValidate="cvcontraseña_ServerValidate"></asp:CustomValidator>
-                        </td>
-                </tr>
-                <tr>
                     <td class="auto-style23">
                         </td>
                     <td class="auto-style24">
-                        <asp:Label ID="Label8" runat="server" Text="Tipo de usuario"></asp:Label>
+                        <asp:Label ID="Label3" runat="server" Text="Contraseña"></asp:Label>
                     </td>
                     <td class="auto-style25">
-                        <asp:DropDownList ID="dbltipousuario" runat="server">
-                            <asp:ListItem>Sistemas</asp:ListItem>
-                            <asp:ListItem>Eventos</asp:ListItem>
+                        <asp:TextBox ID="txbcontraseña" runat="server"></asp:TextBox>
+                    </td>
+                    <td class="auto-style26">
+                        <asp:CustomValidator ID="cvcontraseña" runat="server" ControlToValidate="txbcontraseña" ErrorMessage="Contraseña  muy corta. Debe contener al menos 8 caracteres " OnServerValidate="cvcontraseña_ServerValidate"></asp:CustomValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style23">
+                        &nbsp;</td>
+                    <td class="auto-style24">
+                        <asp:Label ID="Label10" runat="server" Text="Estado"></asp:Label>
+                    </td>
+                    <td class="auto-style25">
+                        <asp:DropDownList ID="dblestado" runat="server">
+                            <asp:ListItem>Habilitado</asp:ListItem>
                         </asp:DropDownList>
                     </td>
                     <td class="auto-style26">
-                        <asp:RequiredFieldValidator ID="rftipousuario" runat="server" ControlToValidate="dbltipousuario" ErrorMessage="Este campo es obligatorio"></asp:RequiredFieldValidator>
-                    </td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style23">
+                        &nbsp;</td>
+                    <td class="auto-style24">
+                        &nbsp;</td>
+                    <td class="auto-style25">
+                        &nbsp;</td>
+                    <td class="auto-style26">
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td colspan="4" class="auto-style27">

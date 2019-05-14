@@ -12,9 +12,9 @@ namespace Control
         Persistencia p = new Persistencia();
         gestionarCuentas c = new gestionarCuentas(); 
         //Controladores del administrador 
-        public bool crearAdmin (int documento,string nombre,string apellido,string correo,decimal telefono,decimal celular, string usuario, string contraseña,string tipousuario)
+        public bool crearAdmin (int documento,string nombre,string apellido,string correo,decimal telefono,decimal celular, string usuario, string contraseña,string tipousuario,string estado)
         {
-            return c.ejecutarDMLProcedimiento(documento, nombre, apellido, correo, telefono, celular, usuario, contraseña, tipousuario);
+            return c.ejecutarDMLProcedimiento(documento, nombre, apellido, correo, telefono, celular, usuario, contraseña, tipousuario,estado);
         }
      
 
@@ -22,15 +22,15 @@ namespace Control
         public DataSet mostrarCuentas()
         {
             DataSet datos = new DataSet();
-            string sql = "select a.idN_DocumentoP, a.nombre,a.apellido,a.correo,a.telefono,a.celular,usuario,contraseña,tipousuario from persona a, encargado b  where a.idN_DocumentoP = b.idN_DocumentoE";
+            string sql = "select a.idN_DocumentoP, a.nombre,a.apellido,a.correo,a.telefono,a.celular,usuario,contraseña,tipo_usuario from persona a, encargado b  where a.idN_DocumentoP = b.idN_DocumentoEn";
             datos = p.ejecutarConsulta(sql);
             return datos;
         }
 
 
-        public bool modificarAdmin (int documento, string nombre, string apellido, string correo, decimal telefono, decimal celular, string usuario, string contraseña, string tipousuario)
+        public bool modificarAdmin (int documento, string nombre, string apellido, string correo, decimal telefono, decimal celular, string usuario, string contraseña, string tipousuario,string estado)
         {
-            return c.modificarCuentas(documento, nombre, apellido, correo, telefono, celular, usuario, contraseña, tipousuario);
+            return c.modificarCuentas(documento, nombre, apellido, correo, telefono, celular, usuario, contraseña, tipousuario,estado);
         }
 
         public bool eliminarCategoria(int documento)
@@ -44,14 +44,14 @@ namespace Control
 
         //Controladores de la empresa
 
-        public bool crearEmpresa(int nitempresa, string persona, int documentoE, string nombre,string direccion, string correo, string telefono)
+        public bool crearEmpresa(int nitempresa, string persona, int documentoE, string nombre,string direccion, string correo, string telefono,string estado)
         {
-            return c.crearEmpresa(nitempresa,persona,documentoE, nombre, direccion, correo,  telefono);
+            return c.crearEmpresa(nitempresa,persona,documentoE, nombre, direccion, correo,  telefono,estado);
         }
 
         public DataSet mostrarEmpresa()
         {
-            string sql = "select NitEm,Per_clien,idN_DocumentoEn, nombre,direccion,correo,telefono_cel from empresa where NitEm = NitEm";
+            string sql = "select NitEm,Per_clien,idN_DocumentoEn, nombre,direccion,correo,telefono_cel,estado from empresa where NitEm = NitEm";
             datos = p.ejecutarConsulta(sql);
             return datos;
         }
@@ -59,9 +59,9 @@ namespace Control
         {
             return c.buscarEmpresa(nit);
         }
-        public bool modificarEmpresa (int nit, string tipoempresa, int documento, string nombre, string direccion, string correo, string  celular)
+        public bool modificarEmpresa (int nit, string tipoempresa, int documento, string nombre, string direccion, string correo, string  celular,string estado)
         {
-            return c.modificarEmpresa(nit, tipoempresa, documento, nombre, direccion, correo, celular);
+            return c.modificarEmpresa(nit, tipoempresa, documento, nombre, direccion, correo, celular,estado);
 
         }
     }
